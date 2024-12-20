@@ -27,6 +27,10 @@
   - Không cần dùng NAT (lượng địa chỉ IP đủ lớn để có thể thoải mái cho mỗi thiết bị một IP duy nhất). Việc này đảm bảo rằng source IP và destination IP trong IPv6 header không cần phải được thay đổi trong quá trình vận chuyển
   - Một host có thể cùng lúc có nhiều địa chỉ IP khác nhau dùng cho nhiều mục đích khác nhau để làm cho việc trao đổi thông tin hiệu quả hơn (Ví dụ vừa có unique-local IPv6 để giao tiếp với các máy trong mạng nội bộ, vừa có một unique-global address để giao tiếp với internet, và các máy được khuyến nghị dùng địa chỉ IP phù hợp nhỏ nhất để thực hiện giao tiếp)
   - Phần subnet của địa chỉ IPv6 có thể được dùng để tối ưu việc routing bằng cách phân cáp đầu tố. 
+- Một số khuyến nghị của IETF để đơn giản hóa việc quản trị mạng:
+  - Mỗi subnet luôn là một block /64
+  - Mỗi endsite sẽ được assign ít nhất một block từ /48 đến /56 (từ 256 đến 65536 subnet)
+  - Các ISP thường được assign các block /32
 
 ## Một số cải tiến khác về mặt protocol
 - IPsec là bắt buộc trong IPv6
